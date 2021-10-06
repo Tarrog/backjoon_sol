@@ -2,14 +2,14 @@
 using namespace std;
 
 int main() {
-    int n, num;
+    int n;
+    char num[101];
     cin >> n;
     cin >> num;
     int result = 0;
 
-    while (num > 0) {
-        result += num % 10;
-        num /= 10;
+    for (int i = 0; i < n; ++i) {
+        result += (static_cast<int>(num[i]) - 48) % 10;
     }
     cout << result;
 }
